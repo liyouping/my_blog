@@ -1,0 +1,22 @@
+<% @articles.each do |article| %>
+  <h2>
+    <%= link_to article.title ,article_path(article) %>
+    <small>
+      <% article.tags.each do |tag| %>
+        <span class="tag"><%= tag.name %></span>
+      <% end %>
+    </small>
+  </h2>
+    <div>
+      <%= article.content.to_s.truncate(200) %>
+    </div>
+    <br>
+    <p class="grey">
+      <%= image_tag 'me.jpg', alt: 'lyp', class: 'author-thumb' %><i class="fa fa-clock-o"></i>   <%= article.created_at.strftime('%F') %>
+    </p>
+<% end %>
+
+<div class="page-box">
+  <%= link_to_prev_page @articles,"上一页", remote: true,params: params.permit(:search, :category),class: 'prev-page' %>
+  <%= link_to_next_page @articles,"下一页", remote: true,params: params.permit(:search, :category),class: 'next-page' %>
+</div>

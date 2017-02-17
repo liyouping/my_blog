@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>新增博客</h2>
+  <div class="row">
+    <%= form_for :article, {url: admin_articles_path,role: "form"} do |f| %>
+    <div>
+      <%= f.submit "保存" , class: "btn btn-primary save-btn"%>
+    </div>
+     <%= render partial: 'form', locals: {f: f,article: @article} %>
+    <% end %>
+  </div>
+</div>

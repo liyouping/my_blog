@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>李有平的博客</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width,
+                                     initial-scale=1.0,
+                                     maximum-scale=1.0,
+                                     user-scalable=no">
+    <%= stylesheet_link_tag    'admin/application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'admin/application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%= render partial: "common/admin/admin_header" %>
+  <%= render partial: "common/flash_notice_or_error" %>
+    <%= yield %>
+
+  </body>
+</html>

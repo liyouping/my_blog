@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>李有平的博客</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width,
+                                     initial-scale=1.0,
+                                     maximum-scale=1.0,
+                                     user-scalable=no">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render partial: 'common/nav' %>
+
+    <div class="container">
+      <%= render partial: "common/flash_notice_or_error" %>
+      <div class="row">
+        <%= yield %>
+        <div class="col-md-4 col-lg-4">
+          <%= render partial: 'common/nav_right' %>
+        </div>
+      </div>
+      <%= render partial: 'common/footer' %>
+    </div>
+
+  </body>
+</html>

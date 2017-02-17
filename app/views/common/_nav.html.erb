@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="nabigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+              data-target="#example-navbar-collapse">
+        <span class="sr-only">切换导航</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to '主页',articles_path, class: 'navbar-brand' %>
+    </div>
+    <div class="collapse navbar-collapse" id="example-navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="<%= params[:action].downcase == 'about' ? 'active current' : '' %>">
+          <%= link_to '关于我', about_articles_path %>
+        </li>
+        <li class="<%= params[:action].downcase == 'contact' ? 'active current' : '' %>">
+          <%= link_to '留言', contact_articles_path %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="fill visible-desktop hidden-phone" style="background-image:url('<%= image_url 'banner.jpg' %>');height: 300px;margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;">
+</div>

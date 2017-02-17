@@ -1,0 +1,23 @@
+<div class="col-md-8 control-group form-group ">
+  <h3>给我留言：</h3>
+  <%= form_for @contact, url: send_message_articles_path, id: 'contactForm' do |f| %>
+      <div class="control-group form-group">
+
+      <%= f.label :name,"姓名：" %>
+      <%= f.text_field :name ,class: "form-control" %>
+      </div>
+      <div class="control-group form-group">
+      <%= f.label :name,"手机：" %>
+      <%= f.text_field :tel ,class: "form-control", maxlength: 11 %>
+      </div>
+      <div class="control-group form-group">
+      <%= f.label :name,"邮箱：" %>
+      <%= f.text_field :email ,class: "form-control" ,maxlength:20 %>
+      </div>
+      <div class="control-group form-group">
+      <%= f.label :message,"内容：" %>
+      <%= f.text_area :message,class: "form-control" ,maxlength:800,style:"resize:none" , id:"message",rows:10,cols: 100  %>
+      </div>
+      <%= f.submit '发送',class: 'btn btn-primary' %>
+  <% end %>
+</div>

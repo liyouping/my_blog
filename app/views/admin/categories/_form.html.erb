@@ -1,0 +1,23 @@
+<div class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-1g-12">
+          <%= f.submit "保存" , class: "btn btn-primary save-btn"%> <%= link_to "返回",admin_categories_path,class: "btn btn-primary back-btn" %>
+        </div>
+      <% if category.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+          <ul>
+          <% category.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+        <div class="col-xs-12 col-sm-12 col-md-4 col-1g-4 control-group form-group ">
+        <%= f.label :name,"分类名" %>
+        <%= f.text_field :name ,class: "form-control"%>
+      </div>
+
+</div>

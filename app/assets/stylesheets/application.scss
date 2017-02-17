@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *= require font-awesome
+ *= require_tree .
+ *= require_self
+ */
+/*使用bootstrap*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+/*使用bootstrap*/
+body{
+  padding-top: 50px;
+}
+.navbar-fixed-top .navbar-inner {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+@media (min-width: 768px){
+  .navbar{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+}
+
+a,a:link,a:visited,a:hover,a:active{
+  text-decoration:none;
+}
+.btn{
+  width: 100px;
+}
+.current a{
+  color: white!important;
+}
+
+.category-item>a{
+  color: white!important;
+  display: inline-block;
+  margin: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  height: 30px;
+  background-color: lightskyblue;
+}
+.panel-info{
+  border-color: #333333;
+}
+.panel-info > .panel-heading{
+  background-color: #333333;
+  color: white;
+}
+.web-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.web-list-item{
+  width: 100%;
+  margin: 5px auto;
+}
+.web-list-item>a>img{
+  width: 150px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0 8px;
+  color: #017e66;
+  background-color: rgba(1,126,102,.08);
+  height: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: center;
+  margin: 5px;
+}
+.copyright{
+  text-align: center;
+}
+
+.author-thumb {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-right: 9px;
+  border-radius: 100%;
+}

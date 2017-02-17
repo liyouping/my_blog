@@ -1,0 +1,6 @@
+<div class="container">
+  <h2>修改标签</h2>
+  <%= form_for(@tag, {url: admin_tag_path(@tag),role: "form"}) do |f| %>
+  <%= render partial: 'form',locals:{tag: @tag ,f: f} %>
+  <% end %>
+</div>

@@ -1,0 +1,15 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#article_content{
+  width: 100%;
+  height: 500px;
+}
+.my-table th:nth-child(1){
+  width: 300px;
+  min-width: 300px;
+}
+.my-table th:last-child{
+  width: 400px;
+  min-width: 400px;
+}

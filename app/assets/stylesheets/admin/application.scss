@@ -1,0 +1,52 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/*使用bootstrap*/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+/*使用bootstrap*/
+.navbar-fixed-top .navbar-inner {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+@media (min-width: 768px){
+  .navbar{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+}
+
+a,a:link,a:visited,a:hover,a:active{
+  text-decoration:none;
+}
+.btn{
+  width: 100px;
+}
+.save-btn,.back-btn,.mb15{
+  margin-bottom: 15px;
+}
+.back-btn{
+  margin-left: 20px;
+}
+.my-table{
+  text-align: center;
+}
+.my-table th{
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}

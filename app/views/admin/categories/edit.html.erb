@@ -1,0 +1,6 @@
+<div class="container">
+<h2>修改分类</h2>
+  <%= form_for(@category, {url: admin_category_path(@category),role: "form"}) do |f| %>
+    <%= render partial: 'form', locals: {f: f,category: @category} %>
+  <% end %>
+</div>
