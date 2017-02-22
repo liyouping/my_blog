@@ -18,7 +18,7 @@ set :domain, 'root@118.89.151.182'
 #服务器中项目部署位置
 set :deploy_to, '/var/lyp-rails-app/my_blog'
 #git代码仓库
-set :repository, 'git://...'
+set :repository, 'https://github.com/liyouping/my_blog.git'
 #git分支
 set :branch, 'master'
 
